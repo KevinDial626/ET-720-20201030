@@ -4,6 +4,28 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
+import {
+  AccordionModule,
+  AlertModule,        // Foundation Callouts
+  ButtonsModule,
+  CarouselModule,     // Foundation Orbit
+  CollapseModule,
+  BsDatepickerModule,
+  BsDropdownModule,   // Foundation Dropdown Menus and Dropdown Panes
+  ModalModule,        // Foundation Reveal
+  OffcanvasModule,
+  PaginationModule,
+  ProgressbarModule,
+  RatingModule,
+  SortableModule,
+  TabsModule,
+  TimepickerModule,
+  TooltipModule,
+  TypeaheadModule,
+} from 'ngx-foundation';
+
+
+
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { ProductListComponent } from './product-list/product-list.component';
@@ -12,12 +34,16 @@ import { ProductDetailsComponent } from './product-details/product-details.compo
 import { CartService } from './cart.service';
 import { CartComponent } from './cart/cart.component';
 import { ShippingComponent } from './shipping/shipping.component';
+import { FngAccordionComponent } from './fng-accordion/fng-accordion.component';
 
 @NgModule({
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     HttpClientModule,
+    AlertModule.forRoot(),
+    AccordionModule.forRoot(),
+
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent },
@@ -32,7 +58,8 @@ import { ShippingComponent } from './shipping/shipping.component';
     ProductAlertsComponent,
     ProductDetailsComponent,
     CartComponent,
-    ShippingComponent
+    ShippingComponent,
+    FngAccordionComponent
   ],
   bootstrap: [ AppComponent ],
   providers: [CartService]
