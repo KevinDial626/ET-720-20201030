@@ -77,9 +77,9 @@
   <ul class="menu vertical">
     <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
       
-      <a [routerLink]="['/']">
-  <h1>My Store</h1>
-</a>
+      <a routerLink="/" class="button fancy-button">
+        <i class="material-icons">store</i>My Store
+      </a>
 
     </li>
 
@@ -90,6 +90,16 @@
       </a>
       
     </li>
+
+    <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+      
+      <a routerLink="/shipping" class="button fancy-button">
+        <i class="material-icons">local_shipping</i>S
+      </a>
+      
+    </li>
+
+
   </ul>
   <button class="close-button" aria-label="Close Menu" aria-controls="offCanvasMenu" type="button" (click)="offcanvasRight.hide()">
     <span aria-hidden="true">×</span>
