@@ -43,6 +43,7 @@ import { FngAccordionComponent } from './fng-accordion/fng-accordion.component';
     HttpClientModule,
     AlertModule.forRoot(),
     AccordionModule.forRoot(),
+    OffcanvasModule.forRoot(),
 
     RouterModule.forRoot([
       { path: '', component: ProductListComponent },
